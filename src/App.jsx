@@ -41,73 +41,75 @@ function App() {
           <div className="connect">
             <ConnectWallet />
           </div>
-          {
-            address && 
-            <div className="stakeContainer">
-            <input
-              type="number"
-              className="textbox"
-              value={amountToStake}
-              onChange={(e) => setAmountToStake(e.target.value)}
-            />
-            {/* WEB3 BUTTONS START */}
-            {/* Stake Button */}
-            <Web3Button
-              contractAddress={stakingAddress}
-              action={async (contract) => {
-                //ERC20 token should be created as variable
-                await AW3Token.setAllowance(stakingAddress, amountToStake);
-                await contract.call("stake", [
-                  ethers.utils.parseEther(amountToStake),
-                ]);
-              }}
-              theme="dark"
-            >
-              Stake
-            </Web3Button>
+          {address && (
+            <>
+              <div className="stakeContainer">
+                <input
+                  type="number"
+                  className="textbox"
+                  value={amountToStake}
+                  onChange={(e) => setAmountToStake(e.target.value)}
+                />
+                {/* WEB3 BUTTONS START */}
+                {/* Stake Button */}
+                <Web3Button
+                  contractAddress={stakingAddress}
+                  action={async (contract) => {
+                    //ERC20 token should be created as variable
+                    await AW3Token.setAllowance(stakingAddress, amountToStake);
+                    await contract.call("stake", [
+                      ethers.utils.parseEther(amountToStake),
+                    ]);
+                  }}
+                  theme="dark"
+                >
+                  Stake
+                </Web3Button>
 
-            {/* Stake Button */}
-            <Web3Button
-              contractAddress={stakingAddress}
-              action={async (contract) => {
-                await contract.call("withdraw", [
-                  ethers.utils.parseEther(amountToStake),
-                ]);
-              }}
-              theme="dark"
-            >
-              Unstake
-            </Web3Button>
+                {/* Stake Button */}
+                <Web3Button
+                  contractAddress={stakingAddress}
+                  action={async (contract) => {
+                    await contract.call("withdraw", [
+                      ethers.utils.parseEther(amountToStake),
+                    ]);
+                  }}
+                  theme="dark"
+                >
+                  Unstake
+                </Web3Button>
 
-            {/* Claim Rewards Button */}
-            <Web3Button
-              contractAddress={stakingAddress}
-              action={async (contract) => {
-                await contract.call("claimRewards");
-              }}
-              theme="dark"
-            >
-              Claim Rewards!
-            </Web3Button>
-            {/* WEB3 BUTTONS END */}
-          </div>
-          }
-          <div className="grid">
-            <p className="card">
-              Staked:{" "}
-              {data?._tokensStaked &&
-                ethers.utils.formatEther(data?._tokensStaked)}{" "}
-              AW3
-            </p>
-            <p className="card">
-              Rewards:{" "}
-              {data?._rewards &&
-                Number(ethers.utils.formatEther(data?._rewards)).toFixed(
-                  2
-                )}{" "}
-              KTR
-            </p>
-          </div>
+                {/* Claim Rewards Button */}
+                <Web3Button
+                  contractAddress={stakingAddress}
+                  action={async (contract) => {
+                    await contract.call("claimRewards");
+                  }}
+                  theme="dark"
+                >
+                  Claim Rewards!
+                </Web3Button>
+                {/* WEB3 BUTTONS END */}
+              </div>
+
+              <div className="grid">
+                <p className="card">
+                  Staked:{" "}
+                  {data?._tokensStaked &&
+                    ethers.utils.formatEther(data?._tokensStaked)}{" "}
+                  AW3
+                </p>
+                <p className="card">
+                  Rewards:{" "}
+                  {data?._rewards &&
+                    Number(ethers.utils.formatEther(data?._rewards)).toFixed(
+                      2
+                    )}{" "}
+                  KTR
+                </p>
+              </div>
+            </>
+          )}
         </main>
       </div>
     </>
