@@ -1,4 +1,21 @@
-# Getting Started with Create React App
+
+# Staking App
+
+This app gives you ability to stake AW3 tokens which is created by [Alperen Özkan](https://alperen.co) alias [alperenweb3](httos://twitter.com/alperenweb3)
+
+This application is developed for test purposes and tested in Ethereum Sepolia Test Network.
+
+### AW3 Token Contract Address
+[0xAC17E4f26dc73c103c8Bb61235d69326C5B83bE4](https://sepolia.etherscan.io/token/0xAC17E4f26dc73c103c8Bb61235d69326C5B83bE4)
+
+
+
+## Screenshot
+
+![App Screenshot](hhttps://stake-aw3.vercel.app/staking_app_ss.png)
+
+
+## Deployment
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -6,65 +23,31 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install`
+
+to install the project dependencies and 
+
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Support
 
-### `npm run build`
+For support, email alperenweb3@gmail.com
+## 🚀 About Me
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## I'm Alperen Özkan
+### AYZÖFL'02 | PA'08 | DCI | USTECH Academy
+#### Dreams are the shadows of the Reality. 
+##### #whoami 👉🏼 #webdeveloper #webdesigner #blockchaindeveloper #freelancer #selflearner
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 🔭 I’m currently working on Blockchain and Web3 Development
+- 🌱 I’m currently learning React and Solidity
+- 💬 Ask me about JavaScript
+- 📫 How to reach me: @alperenweb3 twitter
+- ⚡ Fun fact: There is no fun fact in Germany, go back to work :D 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+PS: I have created this github after starting my Web3 Journey. Please check my other [github account](https://github.com/thechiefalone) for past references. 
