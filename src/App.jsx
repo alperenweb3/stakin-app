@@ -105,7 +105,7 @@ function App() {
                     Number(ethers.utils.formatEther(data?._rewards)).toFixed(
                       2
                     )}{" "}
-                  KTR
+                  KYTR
                 </p>
               </div>
             </>
