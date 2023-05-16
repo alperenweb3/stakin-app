@@ -12,7 +12,7 @@ const AW3TokenAddress = "0xAC17E4f26dc73c103c8Bb61235d69326C5B83bE4";
 
 function App() {
   const { contract } = useContract(stakingAddress);
-  const { contract : AW3Token, isLoading: isStakingTokenLoading } =
+  const { contract: AW3Token, isLoading: isStakingTokenLoading } =
     useContract(AW3TokenAddress);
   console.log(isStakingTokenLoading);
 
@@ -44,15 +44,17 @@ function App() {
           <div className="stakeContainer">
             <input
               type="number"
-              className="textBox"
+              className="textbox"
               value={amountToStake}
               onChange={(e) => setAmountToStake(e.target.value)}
             />
+            {/* WEB3 BUTTONS START */}
+            {/* Stake Button */}
             <Web3Button
               contractAddress={stakingAddress}
               action={async (contract) => {
                 //ERC20 token should be created as variable
-                await AW3Token.setAllowance(stakingAddress,amountToStake);
+                await AW3Token.setAllowance(stakingAddress, amountToStake);
                 await contract.call("stake", [
                   ethers.utils.parseEther(amountToStake),
                 ]);
@@ -61,6 +63,31 @@ function App() {
             >
               Stake
             </Web3Button>
+
+            {/* Stake Button */}
+            <Web3Button
+              contractAddress={stakingAddress}
+              action={async (contract) => {
+                await contract.call("withdraw", [
+                  ethers.utils.parseEther(amountToStake),
+                ]);
+              }}
+              theme="dark"
+            >
+              Unstake
+            </Web3Button>
+
+            {/* Claim Rewards Button */}
+            <Web3Button
+              contractAddress={stakingAddress}
+              action={async (contract) => {
+                await contract.call("claimRewards");
+              }}
+              theme="dark"
+            >
+              Claim Rewards!
+            </Web3Button>
+            {/* WEB3 BUTTONS END */}
           </div>
           ​
           <div className="grid">
