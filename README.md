@@ -12,7 +12,7 @@ This application is developed for test purposes and tested in Ethereum Sepolia T
 
 ## Screenshot
 
-![App Screenshot](hhttps://stake-aw3.vercel.app/staking_app_ss.png)
+![App Screenshot](https://stake-aw3.vercel.app/staking_app_ss.png)
 
 
 ## Deployment
