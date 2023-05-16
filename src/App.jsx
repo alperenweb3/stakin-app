@@ -41,7 +41,9 @@ function App() {
           <div className="connect">
             <ConnectWallet />
           </div>
-          <div className="stakeContainer">
+          {
+            address && 
+            <div className="stakeContainer">
             <input
               type="number"
               className="textbox"
@@ -89,7 +91,7 @@ function App() {
             </Web3Button>
             {/* WEB3 BUTTONS END */}
           </div>
-          ​
+          }
           <div className="grid">
             <p className="card">
               Staked:{" "}
